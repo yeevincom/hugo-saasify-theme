@@ -1,35 +1,8 @@
 {{ define "main" }}
 <!-- Hero Section -->
-<section class="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white">
-    <div class="container pt-16 pb-20 md:pt-24 md:pb-28">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    Unlock the Hidden Revenue in Your User Journeys
-                </h1>
-                <p class="text-xl text-gray-600">
-                    Transform your user experience with powerful analytics and insights that drive growth and engagement.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#" class="btn-primary text-center">
-                        Get Started Free
-                    </a>
-                    <a href="#" class="btn-outline text-center">
-                        Schedule Demo
-                    </a>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="relative z-10">
-                    <img src="{{ "images/hero-dashboard.svg" | relURL }}" alt="Analytics Dashboard" class="rounded-xl shadow-elevation">
-                </div>
-                <!-- Background decoration -->
-                <div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-100 rounded-full filter blur-3xl opacity-50"></div>
-                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-secondary-100 rounded-full filter blur-3xl opacity-50"></div>
-            </div>
-        </div>
-    </div>
-</section>
+{{ if .Content }}
+    {{ .Content }}
+{{ end }}
 
 <!-- Client Logos -->
 <section class="border-y border-gray-100">
