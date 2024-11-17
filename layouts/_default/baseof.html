@@ -24,61 +24,7 @@
 </head>
 <body class="flex flex-col min-h-screen">
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
-        <div class="container">
-            <nav class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="{{ .Site.BaseURL }}" class="flex items-center">
-                    {{ with .Site.Params.logo }}
-                        <img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="h-8">
-                    {{ else }}
-                        <span class="text-xl font-bold text-gray-900">{{ .Site.Title }}</span>
-                    {{ end }}
-                </a>
-
-                <!-- Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    {{ range .Site.Menus.main }}
-                        <a href="{{ .URL }}" class="text-gray-600 hover:text-primary-600 font-medium transition duration-200">{{ .Name }}</a>
-                    {{ end }}
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="{{ .Site.Params.signInURL | default "#" }}" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition duration-200 ease-in-out border-2 border-gray-200 hover:border-primary-600 hover:text-primary-600">
-                        Sign in
-                    </a>
-                    <a href="{{ .Site.Params.getStartedURL | default "#" }}" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition duration-200 ease-in-out bg-primary-600 text-white hover:bg-primary-700 hover:scale-105">
-                        Get Started
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden p-2" id="mobile-menu-button" aria-label="Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </nav>
-
-            <!-- Mobile Menu -->
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="py-4 space-y-4">
-                    {{ range .Site.Menus.main }}
-                        <a href="{{ .URL }}" class="block text-gray-600 hover:text-primary-600 font-medium transition duration-200 py-2">{{ .Name }}</a>
-                    {{ end }}
-                    <div class="pt-4 space-y-4">
-                        <a href="{{ .Site.Params.signInURL | default "#" }}" class="block text-center inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition duration-200 ease-in-out border-2 border-gray-200 hover:border-primary-600 hover:text-primary-600">
-                            Sign in
-                        </a>
-                        <a href="{{ .Site.Params.getStartedURL | default "#" }}" class="block text-center inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition duration-200 ease-in-out bg-primary-600 text-white hover:bg-primary-700 hover:scale-105">
-                            Get Started
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {{ partial "header" . }}
 
     <!-- Main Content -->
     <main class="flex-grow pt-20">
