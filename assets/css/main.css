@@ -42,7 +42,7 @@
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-subtle p-6 transition duration-200 hover:shadow-elevation;
+    @apply bg-white rounded-xl shadow-sm p-6 transition duration-200 hover:shadow-md;
   }
 
   .nav-link {

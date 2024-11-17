@@ -1,62 +1,130 @@
 # Hugo Saasify Theme
 
-A modern and elegant Hugo theme specifically designed for SaaS websites, built with TailwindCSS. This theme provides a clean, professional look while maintaining excellent performance and customization options.
+A modern and elegant Hugo theme specifically designed for SaaS websites. Built with TailwindCSS, this theme provides a clean, professional look while maintaining excellent performance and customization options.
 
 ## Features
 
-- 🎨 Built with TailwindCSS for modern, responsive design
-- 🚀 Optimized for performance
-- 📱 Fully responsive design
+- 🎨 Modern design with TailwindCSS
+- 📱 Fully responsive layout
+- 🚀 Performance optimized
+- 💅 Clean typography with Inter & Plus Jakarta Sans fonts
 - 🎯 Perfect for SaaS and business websites
-- 💡 Clean and modern UI components
-- 🛠 Easy to customize and extend
+- 🛠 Easy to customize
+- 📦 No jQuery, minimal JavaScript
 
 ## Requirements
 
-- Hugo version 0.80.0 or higher
-- Node.js and npm for TailwindCSS processing
+- Hugo Extended Version (>= 0.80.0)
+- Node.js (>= 14.x)
+- npm or yarn
 
 ## Installation
 
-1. Initialize a new Hugo site if you haven't already:
-   ```bash
-   hugo new site your-site-name
-   cd your-site-name
-   ```
+### 1. Create a new Hugo site (skip if you have an existing site)
 
-2. Add the theme as a submodule:
-   ```bash
-   git submodule add https://github.com/yourusername/hugo-saasify-theme themes/hugo-saasify-theme
-   ```
+```bash
+hugo new site your-site-name
+cd your-site-name
+```
 
-3. Configure your `hugo.toml`:
-   ```toml
-   baseURL = "/"
-   languageCode = "en-us"
-   title = "Your Site Title"
-   theme = "hugo-saasify-theme"
-   ```
+### 2. Add the theme as a submodule
+
+```bash
+git init
+git submodule add https://github.com/yourusername/hugo-saasify-theme themes/hugo-saasify-theme
+```
+
+### 3. Install dependencies
+
+```bash
+# Copy package.json and other config files to your site root
+cp themes/hugo-saasify-theme/package.json .
+cp themes/hugo-saasify-theme/postcss.config.js .
+cp themes/hugo-saasify-theme/tailwind.config.js .
+
+# Install dependencies
+npm install
+```
+
+### 4. Configure your Hugo site
+
+Create or update your `hugo.toml` with the following configuration:
+
+```toml
+baseURL = "/"
+languageCode = "en-us"
+title = "Your Site Title"
+theme = "hugo-saasify-theme"
+
+[params]
+  description = "Your site description"
+  author = "Your Name"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.80.0"
+```
 
 ## Development
 
-1. Install dependencies:
-   ```bash
-   cd themes/hugo-saasify-theme
-   npm install
-   ```
+To start the development server with live reload:
 
-2. Start development server:
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run start
+```
+
+This will:
+- Watch for changes in your TailwindCSS styles
+- Run the Hugo development server
+- Automatically rebuild when changes are detected
 
 ## Customization
 
-The theme can be customized through:
-- Hugo configuration in `hugo.toml`
-- TailwindCSS configuration in `tailwind.config.js`
-- Custom CSS in `assets/css/main.css`
+### Colors
+
+The theme uses a primary and secondary color scheme that can be customized in `tailwind.config.js`:
+
+```js
+colors: {
+  primary: {
+    // Your primary color palette
+  },
+  secondary: {
+    // Your secondary color palette
+  }
+}
+```
+
+### Typography
+
+The theme uses Inter for body text and Plus Jakarta Sans for headings. You can modify this in `tailwind.config.js`:
+
+```js
+fontFamily: {
+  sans: ['Inter', 'system-ui', 'sans-serif'],
+  heading: ['Plus Jakarta Sans', 'sans-serif'],
+}
+```
+
+### Layout Components
+
+Common components like buttons, cards, and sections can be customized in `assets/css/main.css`.
+
+## Content Structure
+
+```
+content/
+├── _index.md          # Homepage content
+├── blog/              # Blog posts
+├── features/          # Feature pages
+└── docs/              # Documentation pages
+```
 
 ## License
 
 MIT
+
+## Support
+
+If you have any questions or need help, please [open an issue](https://github.com/yourusername/hugo-saasify-theme/issues).

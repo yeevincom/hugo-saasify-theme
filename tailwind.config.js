@@ -28,31 +28,10 @@ module.exports = {
           800: '#6b21a8',
           900: '#581c87',
         },
-        accent: {
-          green: '#22c55e',
-          yellow: '#eab308',
-        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         heading: ['Plus Jakarta Sans', 'sans-serif'],
-      },
-      boxShadow: {
-        'subtle': '0 2px 15px -3px rgba(0, 0, 0, 0.07)',
-        'elevation': '0 10px 40px -3px rgba(0, 0, 0, 0.1)',
-      },
-      borderRadius: {
-        'xl': '1rem',
-        '2xl': '1.5rem',
-      },
-      animation: {
-        'subtle-bounce': 'subtle-bounce 2s infinite',
-      },
-      keyframes: {
-        'subtle-bounce': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-5px)' },
-        },
       },
     },
   },
