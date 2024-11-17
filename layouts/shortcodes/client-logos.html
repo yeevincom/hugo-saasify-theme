@@ -1,0 +1,71 @@
+<section class="border-y border-gray-100 overflow-hidden">
+    <div class="py-12">
+        <p class="text-center text-sm font-medium text-gray-600 mb-8">{{ .Get "title" | default "Trusted by leading companies worldwide" }}</p>
+        <div class="logo-scroll{{ if eq (.Get "animate" | default "true") "false" }} static{{ end }}">
+            <div class="logos-slide{{ if ne (.Get "animate" | default "true") "false" }} animate{{ end }}">
+                {{ range .Page.Params.client_logos }}
+                <img src="{{ .logo | relURL }}" alt="{{ .name }}" />
+                {{ end }}
+                {{ if ne (.Get "animate" | default "true") "false" }}
+                    {{ range .Page.Params.client_logos }}
+                    <img src="{{ .logo | relURL }}" alt="{{ .name }}" />
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.logo-scroll {
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo-scroll.static {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.logo-scroll.static .logos-slide {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.logos-slide {
+    display: inline-block;
+}
+
+.logos-slide.animate {
+    animation: 30s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 32px;
+    margin: 0 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-scroll.static .logos-slide img {
+    margin: 0;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.logo-scroll:hover .logos-slide.animate {
+    animation-play-state: paused;
+}
+</style>
