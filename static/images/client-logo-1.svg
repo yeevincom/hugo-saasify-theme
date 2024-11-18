@@ -1,4 +1,25 @@
-<svg width="160" height="40" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="10" width="120" height="20" rx="4" fill="#6b7280"/>
-  <text x="80" y="25" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Client One</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Define gradient -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f9f9f9"/>
+            <stop offset="100%" style="stop-color:#f3f3f3"/>
+        </linearGradient>
+    </defs>
+    
+    <!-- Light grey oval background with gradient -->
+    <ellipse cx="100" cy="30" rx="95" ry="28" 
+             fill="url(#bgGradient)"/>
+    
+    <!-- Text on top -->
+    <text x="50%" y="50%" 
+          font-family="Arial, sans-serif" 
+          font-size="22" 
+          font-weight="500"
+          fill="#666666" 
+          text-anchor="middle" 
+          dominant-baseline="middle">
+        Customer Logo
+    </text>
 </svg>

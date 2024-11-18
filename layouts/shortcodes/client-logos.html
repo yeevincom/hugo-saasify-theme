@@ -1,7 +1,7 @@
 <section class="border-y border-gray-100 overflow-hidden">
     <div class="py-12">
         <p class="text-center text-sm font-medium text-gray-600 mb-8">{{ .Get "title" | default "Trusted by leading companies worldwide" }}</p>
-        <div class="logo-scroll{{ if eq (.Get "animate" | default "true") "false" }} static{{ end }}">
+        <div class="logo-scroll">
             <div class="logos-slide{{ if ne (.Get "animate" | default "true") "false" }} animate{{ end }}">
                 {{ range .Page.Params.client_logos }}
                 <img src="{{ .logo | relURL }}" alt="{{ .name }}" />
@@ -46,7 +46,7 @@
 }
 
 .logos-slide img {
-    height: 32px;
+    height: 48px;
     margin: 0 40px;
     display: inline-block;
     vertical-align: middle;
