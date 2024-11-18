@@ -1,0 +1,17 @@
+{{/* CTA Shortcode */}}
+<section class="section bg-primary-600">
+    <div class="container">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{{ .Get "title" | default "Ready to Transform Your User Experience?" }}</h2>
+            <p class="text-xl text-primary-100 mb-8">{{ .Get "description" | default "Join thousands of companies already using our platform to drive growth." }}</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="{{ .Get "primary_button_url" | default "#" }}" class="btn bg-white text-primary-600 hover:bg-gray-100">
+                    {{ .Get "primary_button_text" | default "Get Started Free" }}
+                </a>
+                <a href="{{ .Get "secondary_button_url" | default "#" }}" class="btn border-2 border-white text-white hover:bg-primary-700">
+                    {{ .Get "secondary_button_text" | default "Schedule Demo" }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
