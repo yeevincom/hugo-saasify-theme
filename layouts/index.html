@@ -4,65 +4,6 @@
     {{ .Content }}
 {{ end }}
 
-<!-- Feature Sections -->
-<section class="section">
-    <div class="container">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Powerful Features for Modern Teams</h2>
-            <p class="text-xl text-gray-600">Discover how our platform helps you understand and optimize every aspect of your user experience.</p>
-        </div>
-
-        <!-- Feature Grid -->
-        <div class="space-y-24">
-            <!-- Feature 1 -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <div class="inline-block px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-medium">User Analytics</div>
-                    <h3 class="text-2xl md:text-3xl font-bold">Deep Insights into User Behavior</h3>
-                    <p class="text-lg text-gray-600">Track and analyze user interactions in real-time. Understand how users navigate your product and identify opportunities for improvement.</p>
-                    <ul class="space-y-4">
-                        {{ range (slice "Real-time user tracking" "Behavioral analytics" "Custom event tracking" "User flow visualization") }}
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>{{ . }}</span>
-                        </li>
-                        {{ end }}
-                    </ul>
-                    <a href="#" class="btn-primary inline-block">Learn More</a>
-                </div>
-                <div class="relative">
-                    <img src="{{ "images/feature-analytics.svg" | relURL }}" alt="Analytics Feature" class="rounded-xl shadow-elevation">
-                </div>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="relative order-2 lg:order-1">
-                    <img src="{{ "images/feature-session.svg" | relURL }}" alt="Session Replay Feature" class="rounded-xl shadow-elevation">
-                </div>
-                <div class="space-y-6 order-1 lg:order-2">
-                    <div class="inline-block px-4 py-2 rounded-full bg-secondary-100 text-secondary-700 font-medium">Session Replay</div>
-                    <h3 class="text-2xl md:text-3xl font-bold">Watch Real User Sessions</h3>
-                    <p class="text-lg text-gray-600">Understand exactly how users interact with your product through high-fidelity session recordings and heatmaps.</p>
-                    <ul class="space-y-4">
-                        {{ range (slice "Full session recordings" "Click and scroll heatmaps" "Error tracking" "User journey analysis") }}
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>{{ . }}</span>
-                        </li>
-                        {{ end }}
-                    </ul>
-                    <a href="#" class="btn-secondary inline-block">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Testimonials -->
 <section class="section bg-gray-50">
     <div class="container">
