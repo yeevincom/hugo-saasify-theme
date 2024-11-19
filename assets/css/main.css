@@ -17,6 +17,10 @@
 }
 
 @layer components {
+  .rounded-lg {
+    border-radius: 2rem !important;
+  }
+
   .btn {
     @apply inline-flex items-center justify-center px-6 py-3 font-medium transition duration-200 ease-in-out;
     border-radius: 2rem;
