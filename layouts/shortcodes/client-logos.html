@@ -70,4 +70,11 @@
 .logo-scroll:hover .logos-slide.animate {
     animation-play-state: paused;
 }
+
+/* Mobile-specific animation speed */
+@media (max-width: 768px) {
+    .logos-slide.animate {
+        animation: 15s slide infinite linear;
+    }
+}
 </style>

@@ -85,4 +85,11 @@
 .testimonials-container:hover .testimonials-track.animate {
     animation-play-state: paused;
 }
+
+/* Mobile-specific animation speed */
+@media (max-width: 768px) {
+    .testimonials-track.animate {
+        animation: 15s testimonials-scroll infinite linear;
+    }
+}
 </style>
