@@ -44,7 +44,7 @@
   }
 
   .btn-outline {
-    @apply btn border-2 border-gray-200 hover:border-primary-600 hover:text-primary-600;
+    @apply btn border-2 border-gray-200 hover:border-primary-600 hover:text-primary-600 hover:scale-105;
   }
 
   .container {
