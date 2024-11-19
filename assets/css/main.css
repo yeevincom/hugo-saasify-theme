@@ -61,7 +61,7 @@
   }
 
   .nav-link {
-    @apply text-gray-600 hover:text-primary-600 font-medium transition duration-200;
+    @apply text-gray-600 hover:text-primary-600 font-bold transition duration-200;
   }
 
   .feature-grid {
