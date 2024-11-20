@@ -6,9 +6,11 @@
 {{ $secondary_button_url := .Get "secondary_button_url" }}
 {{ $hero_image := .Get "hero_image" }}
 {{ $background_image := .Get "background_image" }}
-{{ $background_color_gradient := .Get "background_color_gradient" | default "from-gray-50 to-white" }}
+{{ $gradient_from := .Get "gradient-from" }}
+{{ $gradient_to := .Get "gradient-to" }}
+{{ $gradient_angle := .Get "gradient-angle" | default "180" }}
 
-<section class="relative overflow-hidden bg-gradient-to-b {{ $background_color_gradient }}">
+<section class="relative overflow-hidden" {{ if $gradient_from }}style="background:linear-gradient({{ $gradient_angle }}deg,{{ $gradient_from }},{{ $gradient_to | default $gradient_from }})"{{ else }}class="bg-gradient-to-b from-gray-50 to-white"{{ end }}>
     {{ if $background_image }}
     <div class="absolute inset-0">
         <img src="{{ $background_image | relURL }}" alt="Background" class="w-full h-full object-cover">

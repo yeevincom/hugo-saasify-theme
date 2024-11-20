@@ -1,8 +1,11 @@
 {{/* CTA Shortcode */}}
 <section class="cta-section">
     <div class="container">
-        <div class="bg-primary-600 rounded-lg">
-            <div class="text-center max-w-3xl mx-auto px-6 py-10">
+        <div class="relative rounded-lg overflow-hidden bg-primary-600" {{ with .Get "gradient-from" }}style="background:linear-gradient({{ if $.Get "gradient-angle" }}{{ $.Get "gradient-angle" }}deg{{ else }}to right{{ end }},{{ . }},{{ $.Get "gradient-to" | default . }})"{{ end }} {{ with .Get "background-image" }}style="background-image:url('{{ . }}');background-size:cover;background-position:center"{{ end }}>
+            {{ with .Get "background-image" }}
+            <div class="absolute inset-0 bg-black/30"></div>
+            {{ end }}
+            <div class="relative text-center max-w-3xl mx-auto px-6 py-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{{ .Get "title" | default "Ready to Transform Your User Experience?" }}</h2>
                 <p class="text-xl text-primary-100 mb-8">{{ .Get "description" | default "Join thousands of companies already using our platform to drive growth." }}</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
