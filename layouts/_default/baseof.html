@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,23 +67,31 @@
         {{ end }}
     {{ end }}
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="min-h-screen flex flex-col">
     <!-- Header -->
-    {{ partial "header" . }}
+    <div class="fixed top-0 left-0 right-0 z-50">
+        {{ partial "header" . }}
+    </div>
 
     <!-- Main Content -->
-    <main class="flex-grow pt-20">
+    <div class="pt-20">
         {{ block "main" . }}{{ end }}
-    </main>
+    </div>
 
     <!-- Footer -->
     {{ partial "footer" . }}
 
     <!-- Mobile Menu Script -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu) {
+                    mobileMenu.classList.toggle('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
