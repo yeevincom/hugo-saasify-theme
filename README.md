@@ -2,7 +2,11 @@
 
 A modern and elegant Hugo theme specifically designed for SaaS websites. Built with TailwindCSS, this theme provides a clean, professional look while maintaining excellent performance and customization options.
 
-![Hugo Saasify Theme](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/images/screenshot.png)
+![Hugo Saasify Theme Screenshot](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/images/screenshot.png)
+
+![Hugo Saasify Theme Screenshot 2](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/screenshots/screenshot2.png)
+
+![Hugo Saasify Theme Screenshot 3](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/screenshots/screenshot3.png)
 
 [Demo Site](https://saasify-demo.chaoming.li)
 
