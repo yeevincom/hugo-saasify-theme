@@ -2,6 +2,10 @@
 
 A modern and elegant Hugo theme specifically designed for SaaS websites. Built with TailwindCSS, this theme provides a clean, professional look while maintaining excellent performance and customization options.
 
+![Hugo Saasify Theme](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/images/screenshot.png)
+
+[Demo Site](https://saasify-demo.chaoming.li)
+
 ## Features
 
 - 🎨 Modern design with TailwindCSS
@@ -31,7 +35,7 @@ cd your-site-name
 
 ```bash
 git init
-git submodule add https://github.com/yourusername/hugo-saasify-theme themes/hugo-saasify-theme
+git submodule add https://github.com/chaoming/hugo-saasify-theme themes/hugo-saasify-theme
 ```
 
 ### 3. Install dependencies
@@ -123,8 +127,8 @@ content/
 
 ## License
 
-MIT
+This theme is released under the [MIT license](https://github.com/chaoming/hugo-saasify-theme/blob/main/LICENSE).
 
 ## Support
 
-If you have any questions or need help, please [open an issue](https://github.com/yourusername/hugo-saasify-theme/issues).
+If you have any questions or need help, please [open an issue](https://github.com/chaoming/hugo-saasify-theme/issues).
