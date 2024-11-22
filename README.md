@@ -50,6 +50,34 @@ cp themes/hugo-saasify-theme/package.json .
 cp themes/hugo-saasify-theme/postcss.config.js .
 cp themes/hugo-saasify-theme/tailwind.config.js .
 
+# Update tailwind.config.js with the following content:
+```
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  presets: [require('./themes/hugo-saasify-theme/tailwind.config.js')],
+  content: [
+    "./themes/hugo-saasify-theme/layouts/**/*.html",
+    "./layouts/**/*.html",
+    "./content/**/*.{html,md}"
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+}
+```
+
+```bash
 # Install dependencies
 npm install
 ```
@@ -59,20 +87,116 @@ npm install
 Create or update your `hugo.toml` with the following configuration:
 
 ```toml
+# Basic Configuration
 baseURL = "/"
 languageCode = "en-us"
 title = "Your Site Title"
 theme = "hugo-saasify-theme"
 
-[params]
-  description = "Your site description"
-  author = "Your Name"
+# Required Features
+pygmentsCodeFences = true  # Enable syntax highlighting
+pygmentsUseClasses = true
+enableEmoji = true        # Enable emoji support
+enableGitInfo = true      # Enable Git info for lastmod
 
+# Required Module Configuration
 [module]
   [module.hugoVersion]
     extended = true
     min = "0.80.0"
+
+# Required Build Configuration
+[build]
+  writeStats = true      # Required for TailwindCSS
+
+# Required Markup Configuration
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+    codeFences = true
+  [markup.goldmark.renderer]
+    unsafe = true       # Allow HTML in markdown
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# Theme Parameters
+[params]
+  description = "Your site description"
+  author = "Your Name"
+  logo = "/images/logo.svg"      # Path to your logo
+
+  # Header Configuration
+  [params.header]
+    background = "bg-white/80 backdrop-blur-sm"
+    border = "border-b border-gray-100"
+    
+    # Header Logo
+    [params.header.logo]
+      src = "/images/logo.svg"
+    
+    # Header Buttons (optional)
+    [params.header.buttons]
+      [params.header.buttons.signIn]
+        text = "Sign in"
+        url = "/signin"
+      [params.header.buttons.getStarted]
+        text = "Get Started"
+        url = "/get-started"
+
+  # Global CTA Configuration (optional)
+  [params.cta]
+    enable = true
+    title = "Ready to Get Started?"
+    description = "Join companies using our platform"
+    [params.cta.primary_button]
+      text = "Get Started Free"
+      url = "/get-started"
+    [params.cta.secondary_button]
+      text = "Book Demo"
+      url = "/demo"
+
+  # Social Media Links (optional)
+  [params.social]
+    linkedin = "https://linkedin.com/in/yourusername"
+    twitter = "https://twitter.com/yourusername"
+    github = "https://github.com/yourusername"
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    name = "Features"
+    weight = 1
+    [menu.main.params]
+      has_submenu = true
+      submenu = [
+        { name = "Feature 1", url = "/features/feature-1/" },
+        { name = "Feature 2", url = "/features/feature-2/" }
+      ]
+  [[menu.main]]
+    name = "Pricing"
+    url = "/pricing"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 3
 ```
+
+This configuration includes:
+
+- **Basic Settings**: Site title, language, and theme selection
+- **Required Features**: Syntax highlighting, emoji support, and Git integration
+- **Module Configuration**: Hugo version requirements
+- **Build Settings**: Required for TailwindCSS integration
+- **Markup Settings**: Code highlighting and markdown rendering options
+- **Theme Parameters**: 
+  - Header configuration with logo and navigation
+  - Call-to-action (CTA) sections
+  - Social media links
+- **Navigation Menu**: Main menu structure with dropdown support
 
 ## Development
 
@@ -86,6 +210,16 @@ This will:
 - Watch for changes in your TailwindCSS styles
 - Run the Hugo development server
 - Automatically rebuild when changes are detected
+
+To build your site for production:
+
+```bash
+npm run build
+```
+
+This will:
+- Build and minify your TailwindCSS styles
+- Generate minified Hugo site in the `public` directory
 
 ## Customization
 
