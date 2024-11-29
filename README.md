@@ -82,6 +82,38 @@ module.exports = {
 npm install
 ```
 
+## Example Site
+
+The theme comes with a fully functional example site that demonstrates its features and capabilities. You can use this as a reference when building your own site.
+
+### Using the Example Site
+
+1. Copy the example site content:
+```bash
+cp -r themes/hugo-saasify-theme/exampleSite/* .
+```
+
+2. The example site includes:
+- Complete content structure with sample pages
+- Blog posts with various layouts
+- Feature pages
+- Career/Jobs section
+- Pricing page
+- Company information page
+- Properly configured hugo.toml
+
+3. Start the development server:
+```bash
+npm run start
+```
+
+The example site provides a great starting point to understand how to:
+- Structure your content
+- Use different page layouts
+- Configure navigation menus
+- Set up site parameters
+- Implement common SaaS website features
+
 ### 4. Configure your Hugo site
 
 Create or update your `hugo.toml` with the following configuration:
