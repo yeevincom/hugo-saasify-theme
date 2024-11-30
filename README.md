@@ -19,6 +19,7 @@ A modern and elegant Hugo theme specifically designed for SaaS websites. Built w
 - 🎯 Perfect for SaaS and business websites
 - 🛠 Easy to customize
 - 📦 No jQuery, minimal JavaScript
+- 📊 Google Analytics support
 
 ## Requirements
 
@@ -159,6 +160,8 @@ enableGitInfo = true      # Enable Git info for lastmod
   description = "Your site description"
   author = "Your Name"
   logo = "/images/logo.svg"      # Path to your logo
+  # Google Analytics ID (e.g., "G-XXXXXXXXXX")
+  googleAnalytics = "G-XXXXXXXXXX"  # Only enabled in production
 
   # Header Configuration
   [params.header]
@@ -228,6 +231,7 @@ This configuration includes:
   - Header configuration with logo and navigation
   - Call-to-action (CTA) sections
   - Social media links
+  - Google Analytics configuration (only enabled in production)
 - **Navigation Menu**: Main menu structure with dropdown support
 
 ## Development
