@@ -2,7 +2,7 @@
 
 A modern and elegant Hugo theme specifically designed for SaaS websites. Built with TailwindCSS, this theme provides a clean, professional look while maintaining excellent performance and customization options.
 
-![Hugo Saasify Theme Screenshot](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/images/screenshot.png)
+![Hugo Saasify Theme Screenshot](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/screenshots/screenshot1.png)
 
 ![Hugo Saasify Theme Screenshot 2](https://raw.githubusercontent.com/chaoming/hugo-saasify-theme/main/screenshots/screenshot2.png)
 
@@ -19,6 +19,7 @@ A modern and elegant Hugo theme specifically designed for SaaS websites. Built w
 - 🎯 Perfect for SaaS and business websites
 - 🛠 Easy to customize
 - 📦 No jQuery, minimal JavaScript
+- 📊 Google Analytics support
 
 ## Requirements
 
@@ -42,7 +43,39 @@ git init
 git submodule add https://github.com/chaoming/hugo-saasify-theme themes/hugo-saasify-theme
 ```
 
-### 3. Install dependencies
+### 3. Example Site (Optional)
+
+The theme comes with a fully functional example site that demonstrates its features and capabilities. You can use this as a reference when building your own site.
+
+### Using the Example Site
+
+1. Copy the example site content:
+```bash
+cp -r themes/hugo-saasify-theme/exampleSite/* .
+```
+
+2. The example site includes:
+- Complete content structure with sample pages
+- Blog posts with various layouts
+- Feature pages
+- Career/Jobs section
+- Pricing page
+- Company information page
+- Properly configured hugo.toml
+
+3. Start the development server:
+```bash
+npm run start
+```
+
+The example site provides a great starting point to understand how to:
+- Structure your content
+- Use different page layouts
+- Configure navigation menus
+- Set up site parameters
+- Implement common SaaS website features
+
+### 4. Install dependencies
 
 ```bash
 # Copy package.json and other config files to your site root
@@ -82,7 +115,7 @@ module.exports = {
 npm install
 ```
 
-### 4. Configure your Hugo site
+### 5. Configure your Hugo site
 
 Create or update your `hugo.toml` with the following configuration:
 
@@ -127,6 +160,8 @@ enableGitInfo = true      # Enable Git info for lastmod
   description = "Your site description"
   author = "Your Name"
   logo = "/images/logo.svg"      # Path to your logo
+  # Google Analytics ID (e.g., "G-XXXXXXXXXX")
+  googleAnalytics = "G-XXXXXXXXXX"  # Only enabled in production
 
   # Header Configuration
   [params.header]
@@ -196,6 +231,7 @@ This configuration includes:
   - Header configuration with logo and navigation
   - Call-to-action (CTA) sections
   - Social media links
+  - Google Analytics configuration (only enabled in production)
 - **Navigation Menu**: Main menu structure with dropdown support
 
 ## Development
