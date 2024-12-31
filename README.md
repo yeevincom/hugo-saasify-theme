@@ -76,7 +76,7 @@ cp -r themes/hugo-saasify-theme/exampleSite/* .
 # Copy package.json and other config files to your site root
 cp themes/hugo-saasify-theme/package.json .
 cp themes/hugo-saasify-theme/postcss.config.js .
-cp themes/hugo-saasify-theme/tailwind.config.js .
+cp themes/hugo-saasify-theme/tailwind.config.copy.js ./tailwind.config.js
 ```
 
 ```bash
