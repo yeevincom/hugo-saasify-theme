@@ -49,6 +49,13 @@ The theme comes with a fully functional example site that demonstrates its featu
 
 ### Using the Example Site
 
+The example site provides a great starting point to understand how to:
+- Structure your content
+- Use different page layouts
+- Configure navigation menus
+- Set up site parameters
+- Implement common SaaS website features
+
 1. Copy the example site content:
 ```bash
 cp -r themes/hugo-saasify-theme/exampleSite/* .
@@ -63,18 +70,6 @@ cp -r themes/hugo-saasify-theme/exampleSite/* .
 - Company information page
 - Properly configured hugo.toml
 
-3. Start the development server:
-```bash
-npm run start
-```
-
-The example site provides a great starting point to understand how to:
-- Structure your content
-- Use different page layouts
-- Configure navigation menus
-- Set up site parameters
-- Implement common SaaS website features
-
 ### 4. Install dependencies
 
 ```bash
@@ -82,32 +77,6 @@ The example site provides a great starting point to understand how to:
 cp themes/hugo-saasify-theme/package.json .
 cp themes/hugo-saasify-theme/postcss.config.js .
 cp themes/hugo-saasify-theme/tailwind.config.js .
-
-# Update tailwind.config.js with the following content:
-```
-
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  presets: [require('./themes/hugo-saasify-theme/tailwind.config.js')],
-  content: [
-    "./themes/hugo-saasify-theme/layouts/**/*.html",
-    "./layouts/**/*.html",
-    "./content/**/*.{html,md}"
-  ],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Plus Jakarta Sans', 'sans-serif'],
-      },
-    },
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
-}
 ```
 
 ```bash
