@@ -281,3 +281,6 @@ This theme is released under the [MIT license](https://github.com/chaoming/hugo-
 ## Support
 
 If you have any questions or need help, please [open an issue](https://github.com/chaoming/hugo-saasify-theme/issues).
+
+## Show Case
+1. Visit <a href="https://link.zhihu.com/?target=https://link.zhihu.com/?target=https%3A%2F%2Frandomanimalgenerator.cc">random animal generator</a>
