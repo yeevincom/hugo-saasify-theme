@@ -284,4 +284,4 @@ If you have any questions or need help, please [open an issue](https://github.co
 
 ## Show Case
 1. Visit <a href="https://link.zhihu.com/?target=https://link.zhihu.com/?target=https%3A%2F%2Frandomanimalgenerator.cc">random animal generator</a>
-2. Vist <a href="https://tinyurl.com/3d5xax4n">random group generator </a>
+2. Visit <a href="https://heic-to-png.org">Local Batch HEIC to PNG Conversion</a>
